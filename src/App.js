@@ -1,10 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-
-var webcamUrl = "https://webcams.windy.com/webcams/stream/1485691420";
-var webcamLocation = "Rhodes (Greece)";
+import Webcam from "./Webcam"
 
 function App() {
   return (
@@ -12,33 +8,25 @@ function App() {
       <h1>Random Webcam</h1>
 
       <div className="row">
-        <div className="col-2" />
+        <div className="col-lg-2 col-md-1 col-sm-0" />
 
-        <div className="col-8">
-          <iframe src={webcamUrl} title="Test Webcam" width="100%" height="784"></iframe>
+        <div className="col-lg-8 col-md-10 col-sm-12">
 
-          <div className="row">
-            <div className="col-4">
-              <p>
-                <b>Location: {webcamLocation}</b>
-              </p>
-            </div>
-            <div className="col-4" />
-            <div className="col-4">
-              <Button variant="primary" onClick={clicked}>New Webcam</Button>
-            </div>
-          </div>
+          <p className="text-muted">
+            <i>
+              Note: Webcam links are occasionally broken. If a webcam does not
+              load after a few seconds, please reload the page to get a new random webcam.
+            </i>
+          </p>
+
+          <Webcam />
 
         </div>
 
-        <div className="col-2" />
+        <div className="col-lg-2 col-md-1 col-sm-0" />
       </div>
     </div>
   );
-}
-
-function clicked() {
-  alert('New webcam requested...');
 }
 
 export default App;
