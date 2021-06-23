@@ -1,5 +1,6 @@
 # Random Webcam
-## View a random weather webcam somewhere in the world!
+
+View a random weather webcam somewhere in the world!
 
 ## Getting Started
 
