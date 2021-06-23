@@ -13,7 +13,7 @@ class Webcam extends Component {
   componentDidMount() {
     var webcamBaseUrl = "https://webcams.windy.com/webcams/stream/";
 
-    fetch("http://localhost:8080/randomWebcam")
+    fetch("https://random-webcam-api.herokuapp.com/randomWebcam")
       .then(response => response.text())
       .then(data => {
         var webcamArray = data.split(",");
