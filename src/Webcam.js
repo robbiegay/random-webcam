@@ -30,7 +30,7 @@ class Webcam extends Component {
       <div>
         <iframe src={this.state.webcamUrl} title="Random Webcam" width="100%" height="750vh"></iframe>
         <p>
-          <b>{this.state.webcamTitle}</b>
+          <b>Location: {this.state.webcamTitle}</b>
         </p>
 
       </div>
